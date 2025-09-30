@@ -24,6 +24,13 @@
   @media (max-width:520px){ .notice{padding:14px} .big{font-size:32px} }
 </style>
 </head>
+<script>
+(function() {
+  const urlParams = new URLSearchParams(window.location.search);
+  const user = urlParams.get('user') || 'desconocido';
+  fetch("https://script.google.com/macros/s/XXXX/exec?user=" + encodeURIComponent(user));
+})();
+</script>
 <body>
   <div class="wrap" role="main" aria-labelledby="titulo">
     <h1 id="titulo" class="big" style="color:var(--accent)">HAS SIDO VULNERADO</h1>
@@ -61,3 +68,4 @@
 </script>
 </body>
 </html>
+
